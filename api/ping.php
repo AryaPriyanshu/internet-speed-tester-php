@@ -1,8 +1,10 @@
 <?php
-header('Content-Type: application/json');
-header('Cache-Control: no-store');
+declare(strict_types=1);
 
-echo json_encode([
+require_once __DIR__ . '/_bootstrap.php';
+require_method('GET');
+
+json_response([
     'status' => 'ok',
-    'timestamp' => microtime(true)
+    'server_time' => microtime(true),
 ]);
