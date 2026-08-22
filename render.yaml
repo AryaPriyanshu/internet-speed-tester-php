@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pulse-speed-test
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /api/health.php
+    envVars:
+      - key: PULSE_TRUST_PROXY
+        value: "1"
